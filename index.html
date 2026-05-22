@@ -266,16 +266,7 @@
                 <p>Visite nossa clínica em Pouso Alegre, MG</p>
             </div>
             <div class="map-wrapper glass scroll-reveal">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.5!2d-45.9315151!3d-22.2377134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbc7ebf876804b:0x15ef3da42e87f545!2sCentral%20da%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1716391200000" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Localização da Central da Odontologia"
-                ></iframe>
+                <div id="map"></div>
             </div>
             <div class="map-controls">
                 <a href="https://maps.google.com/?q=Central+da+Odontologia+Pouso+Alegre+MG" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
@@ -318,6 +309,67 @@
     <script src="assets/js/gallery.js" defer></script>
     <script src="assets/js/testimonials.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
+    
+    <!-- Google Maps API -->
+    <!-- NOTA: Para produção, adicione sua chave de API: key=SUA_CHAVE_AQUI -->
+    <script async src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    
+    <!-- Inicializador do Mapa -->
+    <script>
+        function initMap() {
+            const coords = { lat: -22.2377134, lng: -45.9315151 };
+            
+            // Definir zoom baseado na largura da tela
+            const isSmallScreen = window.innerWidth < 769;
+            const zoomLevel = isSmallScreen ? 16 : 15;
+            
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: zoomLevel,
+                center: coords,
+                mapTypeControl: true,
+                fullscreenControl: true,
+                streetViewControl: true,
+                zoomControl: true,
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{ "color": "#7c7c7c" }]
+                    }
+                ]
+            });
+            
+            // Adicionar marcador com ícone customizado
+            const marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                title: 'Central da Odontologia',
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 12,
+                    fillColor: '#FF6B5B',
+                    fillOpacity: 1,
+                    strokeColor: '#ffffff',
+                    strokeWeight: 2
+                }
+            });
+            
+            // Info Window ao clicar no marcador
+            const infoWindow = new google.maps.InfoWindow({
+                content: '<div style="padding: 10px; font-family: Montserrat, sans-serif;"><strong>Central da Odontologia</strong><br>Pouso Alegre, MG<br><a href="https://wa.me/5535999317870" target="_blank" style="color: #25D366;">Enviar WhatsApp</a></div>'
+            });
+            
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+            
+            // Ajustar zoom ao redimensionar a janela
+            window.addEventListener('resize', () => {
+                const newZoom = window.innerWidth < 769 ? 16 : 15;
+                map.setZoom(newZoom);
+            });
+        }
+    </script>
 
     <!-- Preload de recursos críticos -->
     <link rel="preload" as="image" href="assets/img/hero/hero-bg.webp">
