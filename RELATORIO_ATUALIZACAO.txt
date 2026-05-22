@@ -1,0 +1,10 @@
+
+ATUALIZAÇÕES IMPLEMENTADAS
+
+- Bloco de depoimentos corrigido
+- Caminhos das imagens ajustados
+- Estrutura testimonial-slider otimizada
+- Lazy loading adicionado
+- CSS responsivo implementado
+- Hover animation adicionada
+- Scroll horizontal mobile otimizado

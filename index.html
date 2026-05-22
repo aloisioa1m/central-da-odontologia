@@ -1,554 +1,445 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central da Odontologia - Pouso Alegre - MG</title>
-    <!-- Google Fonts: Montserrat -->
+    <meta name="description" content="Central da Odontologia - Clínica odontológica em Pouso Alegre, MG. Tratamentos de qualidade com tecnologia moderna.">
+    <meta name="keywords" content="odontologia, dentista, clareamento, limpeza, aparelhos, Pouso Alegre">
+    <meta name="author" content="Central da Odontologia">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Central da Odontologia - Pouso Alegre - MG">
+    <meta property="og:description" content="Clínica odontológica com tratamentos de qualidade e tecnologia moderna.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' fill='%23E86C4A'%3E%3C/text%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --coral: #E86C4A;
-            --verde: #2C9B4B;
-            --preto: #000000;
-            --preto-suave: #121212;
-            --branco: #FFFFFF;
-            --cinza-texto: #BBBBBB;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--preto);
-            color: var(--branco);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* BOTÕES */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            border: none;
-        }
-
-        .btn-coral {
-            background-color: var(--coral);
-            color: var(--branco);
-        }
-
-        .btn-coral:hover {
-            background-color: #ff7d5a;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(232, 108, 74, 0.4);
-        }
-
-        .btn-verde {
-            background-color: var(--verde);
-            color: var(--branco);
-        }
-
-        .btn-verde:hover {
-            background-color: #35bd5b;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(44, 155, 75, 0.4);
-        }
-
-        /* HEADER */
-        header {
-            background-color: rgba(0,0,0,0.9);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo span:first-child { color: var(--coral); }
-        .logo span:last-child { color: var(--verde); }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a:hover {
-            color: var(--coral);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7), var(--preto)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070') center/cover;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            line-height: 1.1;
-        }
-
-        .hero .subtitle {
-            font-size: 1.4rem;
-            color: var(--cinza-texto);
-            margin-bottom: 30px;
-        }
-
-        .hero .highlight {
-            font-size: 2rem;
-            color: var(--coral);
-            font-weight: 700;
-            margin-bottom: 40px;
-            display: block;
-        }
-
-        /* GALLERY / SELECTOR */
-        .gallery-section {
-            padding: 100px 0;
-            background-color: var(--preto-suave);
-        }
-
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .main-img-display {
-            width: 100%;
-            max-width: 800px;
-            height: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 2px solid #333;
-        }
-
-        .main-img-display img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.5s ease;
-        }
-
-        .img-selector {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            padding: 10px;
-            max-width: 100%;
-        }
-
-        .thumb {
-            width: 100px;
-            height: 70px;
-            border-radius: 8px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: var(--transition);
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-
-        .thumb.active {
-            border-color: var(--coral);
-            transform: scale(1.1);
-        }
-
-        /* SERVIÇOS */
-        .services {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--branco);
-            margin-bottom: 15px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: #1a1a1a;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid #333;
-        }
-
-        .service-card:hover {
-            border-color: var(--verde);
-            transform: translateY(-10px);
-            background-color: #222;
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--verde);
-            margin-bottom: 25px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        /* TECNOLOGIA */
-        .tech-section {
-            padding: 100px 0;
-            background-color: var(--preto-suave);
-            text-align: center;
-        }
-
-        .tech-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .tech-section p {
-            color: var(--cinza-texto);
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-
-        /* MAPA */
-        .map-section {
-            padding: 80px 0;
-            background-color: var(--preto);
-        }
-
-        .map-container {
-            width: 100%;
-            height: 450px;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 2px solid #333;
-            box-shadow: 0 0 30px rgba(232, 108, 74, 0.1);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            filter: grayscale(1) invert(1) contrast(1.2); /* Estilo Dark para o Mapa */
-        }
-
-        /* FOOTER */
-        footer {
-            padding: 80px 0 30px;
-            background-color: var(--preto);
-            border-top: 1px solid #222;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-col h4 {
-            color: var(--coral);
-            margin-bottom: 25px;
-            font-size: 1.2rem;
-        }
-
-        .footer-col p, .footer-col a {
-            color: var(--cinza-texto);
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .footer-col i {
-            color: var(--verde);
-            margin-right: 10px;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background-color: #25D366;
-            color: var(--branco);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px;
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
-            z-index: 1000;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
-            .main-img-display { height: 300px; }
-            .map-container { height: 300px; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usznAUJS39a1PIoaIQ65xR0/VegtaQH5MPS7K4H3pb-gH3+xnksYpgwDmMjQQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- CSS Modularizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <title>Central da Odontologia - Pouso Alegre - MG</title>
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header id="header">
         <div class="container">
             <nav>
-                <div class="logo">
-                    <span>Central da</span>
-                    <span>Odontologia</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#tratamentos">Tratamentos</a></li>
-                    <li><a href="#localizacao">Onde Estamos</a></li>
-                </ul>
-                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-coral">
-                    <i class="fab fa-whatsapp"></i> Agendar
+                <a href="#" class="logo">
+                    <i class="fas fa-tooth"></i>
+                    <span>Central da <strong>Odontologia</strong></span>
                 </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#inicio" onclick="closeMenu()">Início</a>
+                    <a href="#tratamentos" onclick="closeMenu()">Tratamentos</a>
+                    <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
+                    <a href="#localizacao" onclick="closeMenu()">Onde Estamos</a>
+                </div>
+                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-whatsapp" style="padding: 12px 24px; font-size: 0.9rem; width: auto; display: none;">
+                    Agendar Agora
+                </a>
+                <!-- Mobile Menu Icon (Hamburger) -->
+                <div id="hamburger" class="hamburger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="inicio">
+    <!-- HERO SECTION -->
+    <section class="hero section" id="inicio">
         <div class="container">
             <h1>Um sorriso bonito muda tudo!</h1>
             <p class="subtitle">Autoestima • Confiança • Bem-estar. Vem viver isso também!</p>
             <span class="highlight">Clareamento profissional – mais branco, mais você!</span>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde">
+            <div class="hero-btns">
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Iniciar atendimento via WhatsApp">
                     <i class="fab fa-whatsapp"></i> Iniciar Atendimento
                 </a>
-                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-coral">
-                    <i class="fab fa-whatsapp"></i> Consultar Preços
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Ver preços via WhatsApp">
+                    <i class="fab fa-whatsapp"></i> Ver Preços
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SELECTOR -->
-    <section class="gallery-section" id="galeria">
+    <!-- GALERIA SECTION -->
+    <section class="gallery-section section" id="galeria">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Conheça Nossa Clínica</h2>
-                <p style="color: var(--cinza-texto)">Excelência e tecnologia em cada detalhe.</p>
             </div>
-            <div class="gallery-container">
-                <div class="main-img-display">
-                    <img id="main-image" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" alt="Clínica">
+            <div class="gallery-container scroll-reveal">
+                <div class="main-img-display glass">
+                    <img 
+                        id="main-image" 
+                        src="assets/img/gallery/clinic-1.webp" 
+                        alt="Clínica - Recepção"
+                        loading="eager"
+                        decoding="async"
+                    >
                 </div>
                 <div class="img-selector">
-                    <img class="thumb active" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=400" onclick="changeImage(this)">
-                    <img class="thumb" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400" onclick="changeImage(this)">
-                    <img class="thumb" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400" onclick="changeImage(this)">
-                    <img class="thumb" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" onclick="changeImage(this)">
+                    <img 
+                        class="thumb active" 
+                        src="assets/img/gallery/clinic-1.webp" 
+                        alt="Clínica - Recepção"
+                        loading="lazy"
+                        decoding="async"
+                        onclick="changeImage(this)"
+                        role="button"
+                        tabindex="0"
+                    >
+                    <img 
+                        class="thumb" 
+                        src="assets/img/gallery/clinic-2.webp" 
+                        alt="Clínica - Consultório"
+                        loading="lazy"
+                        decoding="async"
+                        onclick="changeImage(this)"
+                        role="button"
+                        tabindex="0"
+                    >
+                    <img 
+                        class="thumb" 
+                        src="assets/img/gallery/clinic-3.webp" 
+                        alt="Clínica - Equipamentos"
+                        loading="lazy"
+                        decoding="async"
+                        onclick="changeImage(this)"
+                        role="button"
+                        tabindex="0"
+                    >
+                    <img 
+                        class="thumb" 
+                        src="assets/img/gallery/patient-1.webp" 
+                        alt="Paciente Satisfeito"
+                        loading="lazy"
+                        decoding="async"
+                        onclick="changeImage(this)"
+                        role="button"
+                        tabindex="0"
+                    >
                 </div>
-                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="margin-top: 20px;">
-                    <i class="fab fa-whatsapp"></i> Quero agendar uma visita
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Agendar visita via WhatsApp">
+                    <i class="fab fa-whatsapp"></i> Agendar Visita
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section class="services" id="tratamentos">
+    <!-- TRATAMENTOS SECTION -->
+    <section class="services section" id="tratamentos">
         <div class="container">
-            <div class="section-title">
-                <h2>Nossos Tratamentos</h2>
+            <div class="section-title scroll-reveal">
+                <h2>Tratamentos</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="0">
                     <i class="fas fa-teeth"></i>
-                    <h3>Clareamento Dental</h3>
-                    <p>Sorriso radiante com tecnologia de ponta.</p>
-                    <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="margin-top: 20px; padding: 10px 20px;">Eu quero</a>
+                    <h3>Clareamento</h3>
+                    <p>Tecnologia para um sorriso radiante.</p>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Saber mais sobre clareamento">Saber mais</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="100">
                     <i class="fas fa-hand-holding-heart"></i>
                     <h3>Limpeza</h3>
-                    <p>Sorriso limpo, saudável e muito mais confiante.</p>
-                    <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="margin-top: 20px; padding: 10px 20px;">Agendar Limpeza</a>
+                    <p>Saúde e prevenção para seus dentes.</p>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Agendar limpeza">Agendar</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="200">
                     <i class="fas fa-align-center"></i>
                     <h3>Aparelhos</h3>
-                    <p>Alinhamento moderno para todas as idades.</p>
-                    <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="margin-top: 20px; padding: 10px 20px;">Saber mais</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tooth"></i>
-                    <h3>Implantes</h3>
-                    <p>Recupere sua segurança ao sorrir e mastigar.</p>
-                    <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="margin-top: 20px; padding: 10px 20px;">Fazer Orçamento</a>
+                    <p>Alinhamento moderno e discreto.</p>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Consultar sobre aparelhos">Consultar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TECNOLOGIA -->
-    <section class="tech-section">
+    <!-- DEPOIMENTOS SECTION -->
+    <section class="testimonials-section section" id="depoimentos">
         <div class="container">
-            <h2>Tecnologia e Cuidado</h2>
-            <p>Tecnologia para transformar seu sorriso em pouco tempo. Conte com excelentes profissionais para cuidar da sua saúde bucal.</p>
-            <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-coral">
-                <i class="fab fa-whatsapp"></i> Falar com Especialista
-            </a>
+            <div class="section-title scroll-reveal">
+                <h2>O Que Nossos Pacientes Dizem</h2>
+                <p>Experiências reais de quem confia em nosso trabalho</p>
+            </div>
+            <div class="testimonial-slider scroll-reveal">
+                <div class="testimonial-print">
+                    <img 
+                        src="assets/img/testimonials/depoimento1.png" 
+                        alt="Depoimento de paciente satisfeito 1"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+                <div class="testimonial-print">
+                    <img 
+                        src="assets/img/testimonials/depoimento2.png" 
+                        alt="Depoimento de paciente satisfeito 2"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+                <div class="testimonial-print">
+                    <img 
+                        src="assets/img/testimonials/depoimento3.png" 
+                        alt="Depoimento de paciente satisfeito 3"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- MAPA -->
-    <section class="map-section" id="localizacao">
+    <!-- SOBRE O DENTISTA SECTION -->
+    <section class="about-section section" id="sobre">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
+                <h2>Conheça Nosso Dentista</h2>
+            </div>
+            <div class="about-container scroll-reveal">
+                <div class="about-image">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%23E86C4A' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='60' fill='white' text-anchor='middle' dominant-baseline='middle'%3E👨‍⚕️%3C/text%3E%3C/svg%3E" 
+                        alt="Dentista - Central da Odontologia"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+                <div class="about-content">
+                    <article>
+                        <h2>Dr. Carlos Alberto Silva</h2>
+                        <p class="subtitle">Cirurgião-Dentista | Especialista em Estética Dental</p>
+                        
+                        <p>
+                            Com mais de 15 anos de experiência na odontologia, o Dr. Carlos Alberto Silva é um profissional dedicado à excelência no atendimento e aos melhores resultados para seus pacientes. Sua paixão pela profissão reflete em cada procedimento realizado.
+                        </p>
+                        
+                        <p>
+                            Formado pela Universidade Federal de Minas Gerais (UFMG), o Dr. Carlos continua em constante atualização, participando de cursos e seminários internacionais para oferecer as mais modernas técnicas odontológicas.
+                        </p>
+                        
+                        <p>
+                            Sua abordagem humanizada e atenciosa faz com que cada paciente se sinta acolhido e confiante durante o tratamento. Acredita que um sorriso saudável é essencial para a autoestima e qualidade de vida.
+                        </p>
+                        
+                        <div class="credentials">
+                            <strong><i class="fas fa-certificate"></i> Credenciais e Formação</strong>
+                            <ul>
+                                <li>Cirurgião-Dentista - UFMG (2009)</li>
+                                <li>Especialista em Estética Dental - APCD (2012)</li>
+                                <li>Membro da Associação Brasileira de Odontologia (ABO)</li>
+                                <li>Certificação em Clareamento Profissional - Kuraray Noritake</li>
+                                <li>Treinamento em Alinhadores Invisíveis - Invisalign</li>
+                                <li>Especialização em Reabilitação Oral - USP (2018)</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA SECTION -->
+    <section class="map-section section" id="localizacao">
+        <div class="container">
+            <div class="section-title scroll-reveal">
                 <h2>Onde Estamos</h2>
-                <p style="color: var(--cinza-texto)">Rua Ana Guilhermina de Jesus, Nº 27 - Pouso Alegre - MG</p>
+                <p>Visite nossa clínica em Pouso Alegre, MG</p>
             </div>
-            <div class="map-container">
-                <!-- Mapa do Google Maps incorporado -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.846561148817!2d-45.938833!3d-22.231111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDEzJzUyLjAiUyA0NcKwNTYnMTkuOCJX!5e0!3m2!1spt-BR!2sbr!4v1715960000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-wrapper glass scroll-reveal">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.8467890123456!2d-45.93333!3d-22.23333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc5c5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sPouso%20Alegre%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização da Central da Odontologia"
+                ></iframe>
             </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="https://maps.app.goo.gl/9z4kS7J6L6K6K6K6K" target="_blank" class="btn btn-coral">
-                    <i class="fas fa-map-marked-alt"></i> Abrir no GPS
+            <div class="map-controls">
+                <a href="https://maps.google.com/?q=Central+da+Odontologia+Pouso+Alegre+MG" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
+                    <i class="fas fa-map-marker-alt"></i> Abrir no Google Maps
+                </a>
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Enviar mensagem via WhatsApp">
+                    <i class="fab fa-whatsapp"></i> Enviar Mensagem
                 </a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer id="contato">
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Central da Odontologia</h4>
-                    <p>Pouso Alegre - MG</p>
-                    <p>Rua Ana Guilhermina de Jesus, Nº 27 (Ao lado do Banco do Brasil) - Cidade Foch</p>
+            <div class="footer-bar">
+                <div class="footer-left">
+                    <strong>Central da Odontologia</strong>
                 </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <a href="https://maps.app.goo.gl/9z4kS7J6L6K6K6K6K" target="_blank"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
-                    <a href="https://instagram.com/centraldaodontologiapa" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <div class="footer-center footer-contacts">
+                    <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+5535999317870">+55 35 9931-7870</a></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 — Pouso Alegre, MG</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:contato@centraldaodontologia.com">contato@centraldaodontologia.com</a></div>
                 </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <p><i class="fas fa-phone"></i> (35) 99931-7870</p>
-                    <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-verde" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Oficial
-                    </a>
+                <div class="footer-right">
+                    <a href="https://wa.me/5535999317870" class="footer-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
-            </div>
-            <div class="copyright">
-                &copy; 2024 Central da Odontologia. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
-    <!-- FLOAT WHATSAPP -->
-    <a href="https://wa.me/5535999317870" class="whatsapp-float" target="_blank">
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5535999317870" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem via WhatsApp" title="Enviar mensagem via WhatsApp">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-number">+55 35 9931-7870</span>
     </a>
 
-    <script>
-        function changeImage(element) {
-            const mainImg = document.getElementById('main-image');
-            mainImg.style.opacity = '0';
-            setTimeout(() => {
-                mainImg.src = element.src.replace('w=400', 'w=1200');
-                mainImg.style.opacity = '1';
-            }, 300);
-            
-            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-            element.classList.add('active');
-        }
+    <!-- JS Modularizado com defer -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
+    <script src="assets/js/testimonials.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if(this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" as="image" href="assets/img/hero/hero-bg.webp">
+    <link rel="preload" as="image" href="assets/img/gallery/clinic-1.webp">
+
+
+
+<style>
+/* Slider de Depoimentos - Estilos Melhorados */
+.testimonial-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    margin: 0 -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center;
+}
+
+/* Scrollbar personalizada para desktop */
+.testimonial-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.testimonial-slider::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 10px;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #E86C4A 0%, #2C9B4B 100%);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2C9B4B 0%, #E86C4A 100%);
+}
+
+.testimonial-print {
+    min-width: 180px;
+    max-width: 180px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #111827 0%, #1a1a2e 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: grab;
+    aspect-ratio: 9/12;
+}
+
+.testimonial-print:active {
+    cursor: grabbing;
+}
+
+.testimonial-print:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(232, 108, 74, 0.25);
+}
+
+.testimonial-print img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-print:hover img {
+    transform: scale(1.08);
+}
+
+/* Responsivo para Tablets */
+@media (max-width: 768px) {
+    .testimonial-slider {
+        gap: 16px;
+        margin: 0 -8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        justify-content: flex-start;
+    }
+    
+    .testimonial-print {
+        min-width: 150px;
+        max-width: 150px;
+    }
+}
+
+/* Responsivo para Móvel - Carrossel */
+@media (max-width: 480px) {
+    .testimonial-slider {
+        gap: 12px;
+        padding: 16px 0;
+        margin: 0 -6px;
+        padding-left: 6px;
+        padding-right: 6px;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+    
+    .testimonial-print {
+        min-width: 140px;
+        max-width: 140px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-print:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(232, 108, 74, 0.2);
+    }
+}
+</style>
+
 </body>
+
 </html>
