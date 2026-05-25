@@ -89,8 +89,8 @@
                 <div class="main-img-display glass">
                     <img 
                         id="main-image" 
-                        src="assets/img/gallery/clinic-1.webp" 
-                        alt="Clínica - Recepção"
+                        src="assets/img/gallery/clinic-1.jpg" 
+                        alt="Clínica - Fachada Central da Odontologia"
                         loading="eager"
                         decoding="async"
                     >
@@ -98,8 +98,8 @@
                 <div class="img-selector">
                     <img 
                         class="thumb active" 
-                        src="assets/img/gallery/clinic-1.webp" 
-                        alt="Clínica - Recepção"
+                        src="assets/img/gallery/clinic-1.jpg" 
+                        alt="Clínica - Fachada Central da Odontologia"
                         loading="lazy"
                         decoding="async"
                         onclick="changeImage(this)"
@@ -108,8 +108,8 @@
                     >
                     <img 
                         class="thumb" 
-                        src="assets/img/gallery/clinic-2.webp" 
-                        alt="Clínica - Consultório"
+                        src="assets/img/gallery/clinic-2.jpeg" 
+                        alt="Clínica - Entrada e Recepção"
                         loading="lazy"
                         decoding="async"
                         onclick="changeImage(this)"
@@ -118,8 +118,8 @@
                     >
                     <img 
                         class="thumb" 
-                        src="assets/img/gallery/clinic-3.webp" 
-                        alt="Clínica - Equipamentos"
+                        src="assets/img/gallery/clinic-3.jpeg" 
+                        alt="Clínica - Sala de Espera"
                         loading="lazy"
                         decoding="async"
                         onclick="changeImage(this)"
@@ -128,8 +128,8 @@
                     >
                     <img 
                         class="thumb" 
-                        src="assets/img/gallery/patient-1.webp" 
-                        alt="Paciente Satisfeito"
+                        src="assets/img/gallery/patient-1.jpeg" 
+                        alt="Vitrine da Clínica - Tratamentos Disponíveis"
                         loading="lazy"
                         decoding="async"
                         onclick="changeImage(this)"
@@ -266,10 +266,19 @@
                 <p>Visite nossa clínica em Pouso Alegre, MG</p>
             </div>
             <div class="map-wrapper glass scroll-reveal">
-                <div id="map"></div>
+                <iframe
+                    src="https://maps.google.com/maps?q=Av.+Ver.+Ant%C3%B4nio+da+Costa+Rios%2C+261%2C+S%C3%A3o+Geraldo%2C+Pouso+Alegre%2C+MG%2C+37558-059&hl=pt-BR&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0; display:block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização Central da Odontologia"
+                ></iframe>
             </div>
             <div class="map-controls">
-                <a href="https://maps.google.com/?q=Central+da+Odontologia+Pouso+Alegre+MG" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Ant%C3%B4nio+da+Costa+Rios%2C+261%2C+S%C3%A3o+Geraldo%2C+Pouso+Alegre%2C+MG%2C+37558-059" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
                     <i class="fas fa-map-marker-alt"></i> Abrir no Google Maps
                 </a>
                 <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Enviar mensagem via WhatsApp">
@@ -288,7 +297,7 @@
                 </div>
                 <div class="footer-center footer-contacts">
                     <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+5535999317870">+55 35 9931-7870</a></div>
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 — Pouso Alegre, MG</div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Av. Ver. Antônio da Costa Rios, 261 — São Geraldo, Pouso Alegre - MG</div>
                     <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:contato@centraldaodontologia.com">contato@centraldaodontologia.com</a></div>
                 </div>
                 <div class="footer-right">
@@ -310,70 +319,10 @@
     <script src="assets/js/testimonials.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
     
-    <!-- Google Maps API -->
-    <!-- NOTA: Para produção, adicione sua chave de API: key=SUA_CHAVE_AQUI -->
-    <script async src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-    
-    <!-- Inicializador do Mapa -->
-    <script>
-        function initMap() {
-            const coords = { lat: -22.2377134, lng: -45.9315151 };
-            
-            // Definir zoom baseado na largura da tela
-            const isSmallScreen = window.innerWidth < 769;
-            const zoomLevel = isSmallScreen ? 16 : 15;
-            
-            const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: zoomLevel,
-                center: coords,
-                mapTypeControl: true,
-                fullscreenControl: true,
-                streetViewControl: true,
-                zoomControl: true,
-                styles: [
-                    {
-                        "featureType": "all",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{ "color": "#7c7c7c" }]
-                    }
-                ]
-            });
-            
-            // Adicionar marcador com ícone customizado
-            const marker = new google.maps.Marker({
-                position: coords,
-                map: map,
-                title: 'Central da Odontologia',
-                icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
-                    scale: 12,
-                    fillColor: '#FF6B5B',
-                    fillOpacity: 1,
-                    strokeColor: '#ffffff',
-                    strokeWeight: 2
-                }
-            });
-            
-            // Info Window ao clicar no marcador
-            const infoWindow = new google.maps.InfoWindow({
-                content: '<div style="padding: 10px; font-family: Montserrat, sans-serif;"><strong>Central da Odontologia</strong><br>Pouso Alegre, MG<br><a href="https://wa.me/5535999317870" target="_blank" style="color: #25D366;">Enviar WhatsApp</a></div>'
-            });
-            
-            marker.addListener('click', () => {
-                infoWindow.open(map, marker);
-            });
-            
-            // Ajustar zoom ao redimensionar a janela
-            window.addEventListener('resize', () => {
-                const newZoom = window.innerWidth < 769 ? 16 : 15;
-                map.setZoom(newZoom);
-            });
-        }
-    </script>
+    <!-- Mapa via iframe (sem necessidade de API Key) -->
 
     <!-- Preload de recursos críticos -->
-    <link rel="preload" as="image" href="assets/img/hero/hero-bg.webp">
-    <link rel="preload" as="image" href="assets/img/gallery/clinic-1.webp">
+    <link rel="preload" as="image" href="assets/img/gallery/clinic-1.jpg">
 
 
 

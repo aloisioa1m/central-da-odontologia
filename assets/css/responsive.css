@@ -128,12 +128,12 @@
 
     /* Hero Mobile */
     .hero {
-        padding: 100px 0 50px;
+        padding: 110px 0 50px;
     }
 
     .hero h1 {
         font-size: 1.8rem;
-        line-height: 1.1;
+        line-height: 1.2;
     }
 
     .hero .subtitle {
