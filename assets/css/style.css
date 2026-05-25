@@ -482,6 +482,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--spacing-lg);
+    align-items: stretch;
 }
 
 /* Suporte para carrossel em devices pequenos */
@@ -507,6 +508,8 @@ nav {
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    justify-content: space-between;
+    min-height: 260px;
 }
 
 .service-card::before {
@@ -559,6 +562,10 @@ nav {
     margin-bottom: var(--spacing-md);
 }
 
+.service-card .btn {
+    margin-top: auto;
+}
+
 /* ========================================
    DEPOIMENTOS
    ======================================== */
@@ -566,6 +573,42 @@ nav {
 .testimonials-section {
     padding: var(--spacing-2xl) 0;
     background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+}
+
+/* Lightbox / Modal para imagens */
+.image-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 24px;
+}
+
+.image-modal-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    transform: translateY(0);
+}
+
+.image-modal-overlay .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #111;
 }
 
 .testimonials-container {

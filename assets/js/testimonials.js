@@ -139,6 +139,68 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Exportar para escopo global
     window.testimonialsManager = testimonialsManager;
+
+    // Lightbox para imagens de depoimentos
+    function createImageModal() {
+        if (document.getElementById('image-modal-overlay')) return;
+
+        const overlay = document.createElement('div');
+        overlay.id = 'image-modal-overlay';
+        overlay.className = 'image-modal-overlay';
+
+        const img = document.createElement('img');
+        img.alt = '';
+        overlay.appendChild(img);
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-btn';
+        closeBtn.setAttribute('aria-label', 'Fechar imagem');
+        closeBtn.innerHTML = '&times;';
+        overlay.appendChild(closeBtn);
+
+        // fechar ao clicar no overlay (fora da imagem) ou no botão
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                document.body.removeChild(overlay);
+                document.body.style.overflow = '';
+            }
+        });
+
+        // fechar com ESC
+        function onKey(e) {
+            if (e.key === 'Escape') {
+                if (document.getElementById('image-modal-overlay')) {
+                    document.body.removeChild(overlay);
+                    document.body.style.overflow = '';
+                    document.removeEventListener('keydown', onKey);
+                }
+            }
+        }
+
+        document.addEventListener('keydown', onKey);
+
+        document.body.appendChild(overlay);
+        return overlay;
+    }
+
+    function openImageModal(src, alt) {
+        const overlay = createImageModal();
+        const img = overlay.querySelector('img');
+        img.src = src;
+        img.alt = alt || '';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Anexa ouvintes às imagens de depoimentos
+    const testimonialImgs = document.querySelectorAll('.testimonial-print img');
+    testimonialImgs.forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', (e) => {
+            // usar versão maior se existir (data-full-src) senão usar src
+            const fullSrc = img.dataset.fullSrc || img.src;
+            openImageModal(fullSrc, img.alt);
+        });
+    });
 });
 
 // ========================================
