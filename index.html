@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Central da Odontologia - Clínica odontológica em Pouso Alegre, MG. Tratamentos de qualidade com tecnologia moderna.">
+    <meta name="description"
+        content="Central da Odontologia - Clínica odontológica em Pouso Alegre, MG. Tratamentos de qualidade com tecnologia moderna.">
     <meta name="keywords" content="odontologia, dentista, clareamento, limpeza, aparelhos, Pouso Alegre">
     <meta name="author" content="Central da Odontologia">
     <meta name="theme-color" content="#000000">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Central da Odontologia - Pouso Alegre - MG">
     <meta property="og:description" content="Clínica odontológica com tratamentos de qualidade e tecnologia moderna.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' fill='%23E86C4A'%3E%3C/text%3E%3C/svg%3E">
-    
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' fill='%23E86C4A'%3E%3C/text%3E%3C/svg%3E">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <!-- CSS Modularizado -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    
+
     <title>Central da Odontologia - Pouso Alegre - MG</title>
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -49,7 +55,8 @@
                     <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
                     <a href="#localizacao" onclick="closeMenu()">Onde Estamos</a>
                 </div>
-                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-whatsapp" style="padding: 12px 24px; font-size: 0.9rem; width: auto; display: none;">
+                <a href="https://wa.me/5535999317870" target="_blank" class="btn btn-whatsapp"
+                    style="padding: 12px 24px; font-size: 0.9rem; width: auto; display: none;">
                     Agendar Agora
                 </a>
                 <!-- Mobile Menu Icon (Hamburger) -->
@@ -69,10 +76,12 @@
             <p class="subtitle">Autoestima • Confiança • Bem-estar. Vem viver isso também!</p>
             <span class="highlight">Especialista em Implantes !!! </span>
             <div class="hero-btns">
-                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Iniciar atendimento via WhatsApp">
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde"
+                    aria-label="Iniciar atendimento via WhatsApp">
                     <i class="fab fa-whatsapp"></i> Iniciar Atendimento
                 </a>
-                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Ver preços via WhatsApp">
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-coral"
+                    aria-label="Ver preços via WhatsApp">
                     <i class="fab fa-whatsapp"></i> Ver Preços
                 </a>
             </div>
@@ -87,59 +96,25 @@
             </div>
             <div class="gallery-container scroll-reveal">
                 <div class="main-img-display glass">
-                    <img 
-                        id="main-image" 
-                        src="assets/img/gallery/clinic-1.jpg" 
-                        alt="Clínica - Fachada Central da Odontologia"
-                        loading="eager"
-                        decoding="async"
-                    >
+                    <img id="main-image" src="assets/img/gallery/clinic-1.jpg"
+                        alt="Clínica - Fachada Central da Odontologia" loading="eager" decoding="async">
                 </div>
                 <div class="img-selector">
-                    <img 
-                        class="thumb active" 
-                        src="assets/img/gallery/clinic-1.jpg" 
-                        alt="Clínica - Fachada Central da Odontologia"
-                        loading="lazy"
-                        decoding="async"
-                        onclick="changeImage(this)"
-                        role="button"
-                        tabindex="0"
-                    >
-                    <img 
-                        class="thumb" 
-                        src="assets/img/gallery/clinic-2.jpeg" 
-                        alt="Clínica - Entrada e Recepção"
-                        loading="lazy"
-                        decoding="async"
-                        onclick="changeImage(this)"
-                        role="button"
-                        tabindex="0"
-                    >
-                    <img 
-                        class="thumb" 
-                        src="assets/img/gallery/clinic-3.jpeg" 
-                        alt="Clínica - Sala de Espera"
-                        loading="lazy"
-                        decoding="async"
-                        onclick="changeImage(this)"
-                        role="button"
-                        tabindex="0"
-                    >
-                    <img 
-                        class="thumb" 
-                        src="assets/img/gallery/patient-1.jpeg" 
-                        alt="Vitrine da Clínica - Tratamentos Disponíveis"
-                        loading="lazy"
-                        decoding="async"
-                        onclick="changeImage(this)"
-                        role="button"
-                        tabindex="0"
-                    >
+                    <img class="thumb active" src="assets/img/gallery/clinic-1.jpg"
+                        alt="Clínica - Fachada Central da Odontologia" loading="lazy" decoding="async"
+                        onclick="changeImage(this)" role="button" tabindex="0">
+                    <img class="thumb" src="assets/img/gallery/clinic-2.jpeg" alt="Clínica - Entrada e Recepção"
+                        loading="lazy" decoding="async" onclick="changeImage(this)" role="button" tabindex="0">
+                    <img class="thumb" src="assets/img/gallery/clinic-3.jpeg" alt="Clínica - Sala de Espera"
+                        loading="lazy" decoding="async" onclick="changeImage(this)" role="button" tabindex="0">
+                    <img class="thumb" src="assets/img/gallery/patient-1.jpeg"
+                        alt="Vitrine da Clínica - Tratamentos Disponíveis" loading="lazy" decoding="async"
+                        onclick="changeImage(this)" role="button" tabindex="0">
                 </div>
-                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Agendar visita via WhatsApp">
-                    <i class="fab fa-whatsapp"></i> Agendar Visita
-                </a
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde"
+                    aria-label="Agendar visita via WhatsApp">
+                    <i class="fab fa-whatsapp"></i> Agendar Avaliação
+                </a>
             </div>
         </div>
     </section>
@@ -154,22 +129,28 @@
                 <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="0">
                     <i class="fas fa-teeth"></i>
                     <h3>Implantes Dentários</h3>
-                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Saber mais sobre clareamento">Saber mais</a>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-verde" aria-label="Saber mais sobre clareamento">Saber mais</a>
                 </div>
-                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="100">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up"
+                    data-animate-delay="100">
                     <i class="fas fa-hand-holding-heart"></i>
                     <h3>Ortodontia</h3>
-                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Agendar limpeza">Agendar</a>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-verde" aria-label="Agendar limpeza">Agendar</a>
                 </div>
-                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="200">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up"
+                    data-animate-delay="200">
                     <i class="fas fa-align-center"></i>
                     <h3>Tratamento de Canal</h3>
-                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Consultar sobre aparelhos">Consultar</a>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-verde" aria-label="Consultar sobre aparelhos">Consultar</a>
                 </div>
-                               <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="0">
+                <div class="service-card glass scroll-reveal" data-animate="animate-fade-in-up" data-animate-delay="0">
                     <i class="fas fa-teeth"></i>
                     <h3>Facetas</h3>
-                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Saber mais sobre clareamento">Saber mais</a>
+                    <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-verde" aria-label="Saber mais sobre clareamento">Saber mais</a>
                 </div>
             </div>
         </div>
@@ -188,44 +169,24 @@
                 </button>
                 <div class="testimonials-carousel" id="testimonialsCarousel">
                     <div class="testimonial-slide">
-                        <img
-                            src="assets/img/testimonials/depoimento.jpg"
-                            alt="Depoimento de paciente Benedito via WhatsApp"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <img src="assets/img/testimonials/depoimento.jpg"
+                            alt="Depoimento de paciente Benedito via WhatsApp" loading="lazy" decoding="async">
                     </div>
                     <div class="testimonial-slide">
-                        <img
-                            src="assets/img/testimonials/depoimento.jpeg"
-                            alt="Conversa de agradecimento de paciente via WhatsApp"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <img src="assets/img/testimonials/depoimento.jpeg"
+                            alt="Conversa de agradecimento de paciente via WhatsApp" loading="lazy" decoding="async">
                     </div>
                     <div class="testimonial-slide">
-                        <img
-                            src="assets/img/testimonials/depoimento1.png"
-                            alt="Depoimento de paciente - clareamento dental"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <img src="assets/img/testimonials/depoimento1.png"
+                            alt="Depoimento de paciente - clareamento dental" loading="lazy" decoding="async">
                     </div>
                     <div class="testimonial-slide">
-                        <img
-                            src="assets/img/testimonials/depoimento2.png"
-                            alt="Depoimento - Central da Odontologia nota 10"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <img src="assets/img/testimonials/depoimento2.png"
+                            alt="Depoimento - Central da Odontologia nota 10" loading="lazy" decoding="async">
                     </div>
                     <div class="testimonial-slide">
-                        <img
-                            src="assets/img/testimonials/depoimento3.png"
-                            alt="Depoimento - procedimento sem dor"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <img src="assets/img/testimonials/depoimento3.png" alt="Depoimento - procedimento sem dor"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
                 <button class="carousel-btn carousel-btn--next" id="btnNext" aria-label="Próximo">
@@ -237,51 +198,53 @@
     </section>
 
     <!-- SOBRE O DENTISTA SECTION -->
-<section class="about-section section" id="sobre">
-    <div class="container">
-        <div class="section-title scroll-reveal">
-            <h2>Conheça Nosso Dentista</h2>
-        </div>
-        <div class="about-container scroll-reveal">
-        <div class="about-image">
-    <img 
-        src="assets/img/gallery/doutor.png" 
-        alt="Dr. Sergio Elias Filho - Central Odontológica PA"
-        loading="lazy"
-        decoding="async"
-    >
-</div>
-            <div class="about-content">
-                <article>
-                    <h2>Dr. Sergio Elias Filho</h2>
-                    <p class="subtitle">Cirurgião-Dentista | Especialista em Implantes</p>
-                    
-                    <p>
-                        Com mais de 19 anos de experiência na odontologia, o Dr. Sergio Elias Filho é um profissional dedicado à excelência no atendimento e aos melhores resultados para seus pacientes. Sua paixão pela profissão reflete em cada procedimento realizado.
-                    </p>
-                    
-                    <p>
-                        Formado pela Universidade Federal de Alfenas (Unifal - MG), o Dr. Sergio Elias Filho continua em constante atualização, participando de cursos e seminários internacionais para oferecer as mais modernas técnicas odontológicas.
-                    </p>
-                    
-                    <p>
-                        Sua abordagem humanizada e atenciosa faz com que cada paciente se sinta acolhido e confiante durante o tratamento. Acredita que um sorriso saudável é essencial para a autoestima e qualidade de vida.
-                    </p>
-                    
-                    <div class="credentials">
-                        <strong><i class="fas fa-certificate"></i> Credenciais e Formação</strong>
-                        <ul>
-                            <li>Cirurgião-Dentista - Unifal - MG (2007)</li>
-                            <li>Especialista em Implantodontia - UNIP - SP (2020)</li>
-                            <li>Certificação em Cirurgia Oral Menor - ABO de Alfenas - MG</li>
-                            <li>Certificação de Especialização em Implantes Dentários - Implacil de Bortolli</li>
-                        </ul>
-                    </div>
-                </article>
+    <section class="about-section section" id="sobre">
+        <div class="container">
+            <div class="section-title scroll-reveal">
+                <h2>Conheça Nosso Dentista</h2>
+            </div>
+            <div class="about-container scroll-reveal">
+                <div class="about-image">
+                    <img src="assets/img/gallery/doutor.png" alt="Dr. Sergio Elias Filho - Central Odontológica PA"
+                        loading="lazy" decoding="async">
+                </div>
+                <div class="about-content">
+                    <article>
+                        <h2>Dr. Sergio Elias Filho</h2>
+                        <p class="subtitle">Cirurgião-Dentista | Especialista em Implantes</p>
+
+                        <p>
+                            Com mais de 19 anos de experiência na odontologia, o Dr. Sergio Elias Filho é um
+                            profissional dedicado à excelência no atendimento e aos melhores resultados para seus
+                            pacientes. Sua paixão pela profissão reflete em cada procedimento realizado.
+                        </p>
+
+                        <p>
+                            Formado pela Universidade Federal de Alfenas (Unifal - MG), o Dr. Sergio Elias Filho
+                            continua em constante atualização, participando de cursos e seminários internacionais para
+                            oferecer as mais modernas técnicas odontológicas.
+                        </p>
+
+                        <p>
+                            Sua abordagem humanizada e atenciosa faz com que cada paciente se sinta acolhido e confiante
+                            durante o tratamento. Acredita que um sorriso saudável é essencial para a autoestima e
+                            qualidade de vida.
+                        </p>
+
+                        <div class="credentials">
+                            <strong><i class="fas fa-certificate"></i> Credenciais e Formação</strong>
+                            <ul>
+                                <li>Cirurgião-Dentista - Unifal - MG (2007)</li>
+                                <li>Especialista em Implantodontia - UNIP - SP (2020)</li>
+                                <li>Certificação em Cirurgia Oral Menor - ABO de Alfenas - MG</li>
+                                <li>Certificação de Especialização em Implantes Dentários - Implacil de Bortolli</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- MAPA SECTION -->
     <section class="map-section section" id="localizacao">
@@ -293,20 +256,16 @@
             <div class="map-wrapper glass scroll-reveal">
                 <iframe
                     src="https://maps.google.com/maps?q=Av.+Ver.+Ant%C3%B4nio+da+Costa+Rios%2C+261%2C+S%C3%A3o+Geraldo%2C+Pouso+Alegre%2C+MG%2C+37558-059&hl=pt-BR&z=17&output=embed"
-                    width="100%"
-                    height="100%"
-                    style="border:0; display:block;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Localização Central da Odontologia"
-                ></iframe>
+                    width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Localização Central da Odontologia"></iframe>
             </div>
             <div class="map-controls">
-                <a href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Ant%C3%B4nio+da+Costa+Rios%2C+261%2C+S%C3%A3o+Geraldo%2C+Pouso+Alegre%2C+MG%2C+37558-059" target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Ant%C3%B4nio+da+Costa+Rios%2C+261%2C+S%C3%A3o+Geraldo%2C+Pouso+Alegre%2C+MG%2C+37558-059"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-coral" aria-label="Abrir no Google Maps">
                     <i class="fas fa-map-marker-alt"></i> Abrir no Google Maps
                 </a>
-                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde" aria-label="Enviar mensagem via WhatsApp">
+                <a href="https://wa.me/5535999317870" target="_blank" rel="noopener noreferrer" class="btn btn-verde"
+                    aria-label="Enviar mensagem via WhatsApp">
                     <i class="fab fa-whatsapp"></i> Enviar Mensagem
                 </a>
             </div>
@@ -321,19 +280,24 @@
                     <strong>Central da Odontologia</strong>
                 </div>
                 <div class="footer-center footer-contacts">
-                    <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+5535999317870">+55 35 9931-7870</a></div>
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Av. Ver. Antônio da Costa Rios, 261 — São Geraldo, Pouso Alegre - MG</div>
-                    <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:contato@centraldaodontologia.com">contato@centraldaodontologia.com</a></div>
+                    <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+5535999317870">+55 35
+                            9931-7870</a></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Av. Ver. Antônio da Costa Rios, 261
+                        — São Geraldo, Pouso Alegre - MG</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> <a
+                            href="mailto:contato@centraldaodontologia.com">contato@centraldaodontologia.com</a></div>
                 </div>
                 <div class="footer-right">
-                    <a href="https://wa.me/5535999317870" class="footer-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://wa.me/5535999317870" class="footer-whatsapp" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5535999317870" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem via WhatsApp" title="Enviar mensagem via WhatsApp">
+    <a href="https://wa.me/5535999317870" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Enviar mensagem via WhatsApp" title="Enviar mensagem via WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-number"></span>
     </a>
@@ -343,7 +307,7 @@
     <script src="assets/js/gallery.js" defer></script>
     <script src="assets/js/testimonials.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
-    
+
     <!-- Mapa via iframe (sem necessidade de API Key) -->
 
     <!-- Preload de recursos críticos -->
@@ -351,148 +315,148 @@
 
 
 
-<style>
-/* ================================================
+    <style>
+        /* ================================================
    CARROSSEL DE DEPOIMENTOS
    ================================================ */
-.testimonials-carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 40px;
-}
+        .testimonials-carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
 
-.testimonials-carousel {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 16px 4px 20px;
-    flex: 1;
-    /* Ocultar scrollbar */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
+        .testimonials-carousel {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 16px 4px 20px;
+            flex: 1;
+            /* Ocultar scrollbar */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
 
-.testimonials-carousel::-webkit-scrollbar {
-    display: none;
-}
+        .testimonials-carousel::-webkit-scrollbar {
+            display: none;
+        }
 
-.testimonial-slide {
-    flex: 0 0 auto;
-    width: 320px;
-    scroll-snap-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
-}
+        .testimonial-slide {
+            flex: 0 0 auto;
+            width: 320px;
+            scroll-snap-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
 
-.testimonial-slide:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
-}
+        .testimonial-slide:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        }
 
-.testimonial-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
+        .testimonial-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
 
-/* Botões de Navegação */
-.carousel-btn {
-    flex: 0 0 auto;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: none;
-    background: #2C9B4B;
-    color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(44, 155, 75, 0.35);
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    z-index: 2;
-}
+        /* Botões de Navegação */
+        .carousel-btn {
+            flex: 0 0 auto;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: #2C9B4B;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(44, 155, 75, 0.35);
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            z-index: 2;
+        }
 
-.carousel-btn:hover {
-    background: #1e7a38;
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(44, 155, 75, 0.5);
-}
+        .carousel-btn:hover {
+            background: #1e7a38;
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(44, 155, 75, 0.5);
+        }
 
-.carousel-btn:disabled {
-    background: #cbd5e1;
-    box-shadow: none;
-    cursor: not-allowed;
-    transform: none;
-}
+        .carousel-btn:disabled {
+            background: #cbd5e1;
+            box-shadow: none;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-/* Dots de Paginação */
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
+        /* Dots de Paginação */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-.carousel-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #cbd5e1;
-    border: none;
-    cursor: pointer;
-    transition: background 0.25s ease, transform 0.25s ease;
-    padding: 0;
-}
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease;
+            padding: 0;
+        }
 
-.carousel-dot.active {
-    background: #2C9B4B;
-    transform: scale(1.3);
-}
+        .carousel-dot.active {
+            background: #2C9B4B;
+            transform: scale(1.3);
+        }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .testimonials-carousel-wrapper {
-        gap: 10px;
-    }
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .testimonials-carousel-wrapper {
+                gap: 10px;
+            }
 
-    .testimonial-slide {
-        width: 260px;
-    }
+            .testimonial-slide {
+                width: 260px;
+            }
 
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 0.95rem;
-    }
-}
+            .carousel-btn {
+                display: none; /* No mobile/tablet usar swipe nativo */
+            }
+        }
 
-@media (max-width: 480px) {
-    .testimonials-carousel-wrapper {
-        gap: 6px;
-    }
+        @media (max-width: 480px) {
+            .testimonials-carousel-wrapper {
+                gap: 6px;
+                margin-left: -10px;
+                margin-right: -10px;
+            }
 
-    .testimonial-slide {
-        width: 220px;
-    }
+            .testimonials-carousel {
+                padding: 16px 14px 20px;
+                gap: 16px;
+            }
 
-    .carousel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
-    }
-}
-</style>
+            .testimonial-slide {
+                width: 280px;
+                max-width: 85vw; /* Impede que seja maior que a tela */
+            }
+        }
+    </style>
 
 </body>
 
